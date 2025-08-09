@@ -39,7 +39,7 @@ const AppContent = () => {
     if (location.pathname === "/") {
       navigate("/games");
     }
-  }, [location.pathname]);
+  }, [location.pathname, navigate]);
 
   useEffect(() => {
     const fetchGames = async () => {

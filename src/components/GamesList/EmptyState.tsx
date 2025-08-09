@@ -1,7 +1,13 @@
-import styled from "styled-components";
 import type { FC } from "react";
 import { Typography } from "../ui/Typography";
 import logo from "../../assets/logo.png";
+import {
+  EmptyContainer,
+  EmptyContent,
+  LogoContainer,
+  Logo,
+  TextContainer,
+} from "./EmptyState.styles";
 
 export type EmptyStateProps = {
   searchQuery?: string;
@@ -61,45 +67,3 @@ export const EmptyState: FC<EmptyStateProps> = ({
   );
 };
 
-const EmptyContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  padding: ${({ theme }) => `${theme.spacing.xl} ${theme.spacing.lg}`};
-  width: 100%;
-`;
-
-const EmptyContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 500px;
-  position: relative;
-`;
-
-const LogoContainer = styled.div`
-  position: relative;
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
-`;
-
-const Logo = styled.img`
-  height: 80px;
-  position: relative;
-  z-index: 2;
-  object-fit: contain;
-`;
-
-const TextContainer = styled.div`
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-
-  h2 {
-    margin-bottom: ${({ theme }) => theme.spacing.md};
-  }
-
-  p {
-    line-height: 1.6;
-    opacity: 0.8;
-  }
-`;
