@@ -36,6 +36,12 @@ const AppContent = () => {
   );
 
   useEffect(() => {
+    if (location.pathname === "/") {
+      navigate("/games");
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
     const fetchGames = async () => {
       if (!isOnline) {
         setIsLoading(false);
