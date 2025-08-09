@@ -2,6 +2,8 @@
 
 A modern, accessible game library interface built with React, TypeScript, and styled-components.
 
+Hosted version of the App is accessible by this address: https://playlink-game-library.netlify.app/games
+
 ## Design System Overview
 
 ### Colors
