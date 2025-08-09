@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { SliderContainer, BannerImage, SliderTrack } from "./styles";
+import { BannerSliderSkeleton } from "./BannerSliderSkeleton";
 
 import banner1 from "../../assets/banner1.png";
 import banner2 from "../../assets/banner2.png";
@@ -11,7 +12,7 @@ const banners = [
   { id: 3, src: banner3, alt: "Banner 3" },
 ];
 
-export const BannerSlider = () => {
+export const BannerSlider = ({ isLoading = false }: { isLoading?: boolean }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
   const autoPlayRef = useRef<number | null>(null);
@@ -45,6 +46,10 @@ export const BannerSlider = () => {
 
   const handleMouseEnter = () => stopAutoPlay();
   const handleMouseLeave = () => startAutoPlay();
+
+  if (isLoading) {
+    return <BannerSliderSkeleton />;
+  }
 
   return (
     <SliderContainer

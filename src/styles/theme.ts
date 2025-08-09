@@ -6,11 +6,21 @@ export const darkTheme = {
       input: "#25233A",
       button: "#0061FF",
       mobileMenuOverlay: "#1c1a2e60",
+      skeleton: "#25233A",
     },
     text: {
       primary: "#FFFFFF",
       secondary: "#1C1A2E",
       active: "#0061FF",
+      skeleton: {
+        primary: "rgba(255, 255, 255, 0.1)",
+        secondary: "rgba(255, 255, 255, 0.25)",
+        tertiary: "rgba(255, 255, 255, 0.08)",
+        quaternary: "rgba(255, 255, 255, 0.15)",
+        quinary: "rgba(255, 255, 255, 0.05)",
+        senary: "rgba(255, 255, 255, 0.2)",
+        overlay: "rgba(0, 0, 0, 0.6)",
+      },
     },
   },
   spacing: {
@@ -66,6 +76,13 @@ export const darkTheme = {
       bold: 700,
     },
   },
+  boxShadows: {
+    skeleton: {
+      glowStart: "0 0 5px rgba(255, 255, 255, 0.1), inset 0 1px 3px rgba(0, 0, 0, 0.1)",
+      glowEnd: "0 0 15px rgba(255, 255, 255, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.1)",
+      inset: "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
+    },
+  },
 };
 
 export const lightTheme = { ...darkTheme };
@@ -79,11 +96,21 @@ declare module "styled-components" {
         input: string;
         button: string;
         mobileMenuOverlay: string;
+        skeleton: string;
       };
       text: {
         primary: string;
         secondary: string;
         active: string;
+        skeleton: {
+          primary: string;
+          secondary: string;
+          tertiary: string;
+          quaternary: string;
+          quinary: string;
+          senary: string;
+          overlay: string;
+        };
       };
     };
     spacing: {
@@ -137,6 +164,13 @@ declare module "styled-components" {
         medium: number;
         semibold: number;
         bold: number;
+      };
+    };
+    boxShadows: {
+      skeleton: {
+        glowStart: string;
+        glowEnd: string;
+        inset: string;
       };
     };
   }

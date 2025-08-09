@@ -19,6 +19,7 @@ import { Typography } from "./components/ui/Typography";
 import { ROUTES } from "./constants/routes";
 import { useOnlineStatus } from "./hooks/useOnlineStatus";
 import { OfflineState } from "./components/OfflineState";
+import { preloadAllStaticImages } from "./utils/imagePreloader";
 
 const AppContent = () => {
   const location = useLocation();
@@ -43,10 +44,15 @@ const AppContent = () => {
 
       try {
         setIsLoading(true);
-        const response = await fetch(
-          "https://raw.githubusercontent.com/crossoover/mock-api-games/main/db.json"
-        );
-        const data = await response.json();
+
+        const [gamesResponse] = await Promise.all([
+          fetch(
+            "https://raw.githubusercontent.com/crossoover/mock-api-games/main/db.json"
+          ),
+          preloadAllStaticImages(),
+        ]);
+
+        const data = await gamesResponse.json();
 
         // mock 1 second delay
         await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -54,7 +60,7 @@ const AppContent = () => {
         setGames(data);
         setFilteredGames(data.data);
       } catch (error) {
-        console.error("Error fetching games:", error);
+        console.error("Error fetching games or loading images:", error);
       } finally {
         setIsLoading(false);
       }
@@ -177,7 +183,7 @@ const AppContent = () => {
       <MobileMenu />
       <Wrapper>
         <InnerWrap isSidebarOpen={isSidebarOpen} id="main-content">
-          <BannerSlider />
+          <BannerSlider isLoading={isLoading} />
           <FiltersContainer role="region" aria-label="Game filters and search">
             <SearchContainer>
               <SearchInput onSearch={handleSearch} value={searchQuery} />
