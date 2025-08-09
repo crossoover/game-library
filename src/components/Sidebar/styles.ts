@@ -3,11 +3,13 @@ import { FlexAlignCenterJustifyBetween } from "../../styles/global";
 
 export const Wrap = styled.div<{ isOpen: boolean }>`
   display: flex;
-  position: relative;
+  position: fixed;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   z-index: 3;
+  left: ${({ theme }) => theme.spacing.md};
+  top: ${({ theme }) => theme.spacing.md};
   padding: ${({ theme }) => theme.spacing.md};
   padding-top: ${({ theme }) => theme.spacing.sm};
   width: ${({ isOpen }) => (isOpen ? "200px" : "62px")};
@@ -67,8 +69,7 @@ export const Option = styled.div<{ isActive?: boolean }>`
     text-wrap: nowrap;
   }
 
-  i,
-  p {
+  i {
     color: ${({ theme }) => theme.colors.text.primary};
   }
 

@@ -7,6 +7,16 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;

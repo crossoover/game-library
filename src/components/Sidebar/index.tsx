@@ -7,12 +7,17 @@ import { Typography } from "../ui/Typography";
 
 import logo from "../../assets/logo.png";
 
+interface SidebarProps {
+  isSidebarOpen: boolean;
+  setIsSidebarOpen: (value: boolean) => void;
+}
+
 const scrollToTop = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
 
-export const Sidebar = () => {
+export const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: SidebarProps) => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -26,9 +31,6 @@ export const Sidebar = () => {
     []
   );
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(
-    JSON.parse(localStorage.getItem("isSidebarOpen") || "true")
-  );
   const [isQuickOpen, setIsQuickOpen] = useState(() =>
     JSON.parse(localStorage.getItem("isSidebarQuickOpen") || "true")
   );

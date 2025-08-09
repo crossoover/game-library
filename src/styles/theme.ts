@@ -35,6 +35,7 @@ export const darkTheme = {
     slow: "350ms ease-in-out",
   },
   transforms: {
+    smallUpScale: "scale(1.05)",
     regularUpScale: "scale(1.1)",
   },
   dimensions: {
@@ -107,6 +108,7 @@ declare module "styled-components" {
       slow: string;
     };
     transforms: {
+      smallUpScale: string;
       regularUpScale: string;
     };
     dimensions: {

@@ -41,7 +41,6 @@ export const MenuButton = styled.div<{ isActive?: boolean }>`
   }
 
   p {
-    color: ${({ theme }) => theme.colors.text.primary};
     text-align: center;
   }
 
@@ -104,7 +103,6 @@ export const MenuHeader = styled.div`
 
   p {
     margin-left: ${({ theme }) => theme.spacing.sm};
-    color: ${({ theme }) => theme.colors.text.primary};
     text-wrap: nowrap;
   }
 
@@ -122,7 +120,6 @@ export const MenuCategory = styled.section`
 
   h2 {
     margin-bottom: ${({ theme }) => theme.spacing.md};
-    color: ${({ theme }) => theme.colors.text.primary};
   }
 
   &:first-child {
@@ -148,8 +145,7 @@ export const CategoryOption = styled.div<{ isActive?: boolean }>`
     text-wrap: nowrap;
   }
 
-  i,
-  p {
+  i {
     color: ${({ theme }) => theme.colors.text.primary};
   }
 
