@@ -145,10 +145,7 @@ export const FilterDropdown: FC<FilterDropdownProps> = ({
         <Typography variant="span" size="sm">
           {selectedOption ? label + ": " + selectedOption.label : placeholder}
         </Typography>
-        <DropdownIcon
-          className={`pi pi-chevron-${isOpen ? "up" : "down"}`}
-          $isOpen={isOpen}
-        />
+        <DropdownIcon className="pi pi-chevron-down" $isOpen={isOpen} />
       </DropdownButton>
       {isOpen && (
         <DropdownMenu role="listbox" aria-label={`${label} options`}>
@@ -188,4 +185,3 @@ export const ProvidersDropdown: FC<Omit<FilterDropdownProps, "options">> = (
 export const TagsDropdown: FC<Omit<FilterDropdownProps, "options">> = (
   props
 ) => <FilterDropdown {...props} options={TAGS} />;
-
