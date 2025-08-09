@@ -47,12 +47,33 @@ Consistent spacing scale using multiples of 4px:
 _Screenshots will be provided by the user to showcase:_
 
 1. **Main Dashboard** - Shows game library with categories, search, and filters
+<img width="1574" height="1076" alt="Screenshot 2025-08-10 at 00 03 22" src="https://github.com/user-attachments/assets/5a3c1c01-2de2-4086-b594-8bad0256b9b5" />
+
+
 2. **Game Card Interactions** - Hover states showing game details and tags
+<img width="1577" height="1077" alt="Screenshot 2025-08-10 at 00 03 48" src="https://github.com/user-attachments/assets/9b2b6da2-655f-4c19-be8d-019ddf79e059" />
+
+
 3. **Filter & Search States** - Active filters with clear options
+<img width="1223" height="822" alt="Screenshot 2025-08-10 at 00 04 19" src="https://github.com/user-attachments/assets/96318dab-9735-4217-81d7-8e9b92c453a0" />
+
+
 4. **Loading States** - Skeleton components during data fetch
+<img width="1574" height="1073" alt="Screenshot 2025-08-10 at 00 06 43" src="https://github.com/user-attachments/assets/249a490a-acc5-4159-99b1-ee88a5e029d9" />
+
+
 5. **Empty States** - Engaging messaging when no games found
+<img width="1578" height="1076" alt="Screenshot 2025-08-10 at 00 07 28" src="https://github.com/user-attachments/assets/657cd89b-83c2-46d1-958f-e4b611804de1" />
+
+
 6. **Offline State** - Offline screen with retry option
+<img width="1576" height="1074" alt="Screenshot 2025-08-10 at 00 08 19" src="https://github.com/user-attachments/assets/f5f069e2-f395-49c1-ba57-683ab0b9c407" />
+
+
 7. **Mobile View** - Responsive layout on smaller screens
+<img width="411" height="893" alt="Screenshot 2025-08-10 at 00 09 54" src="https://github.com/user-attachments/assets/3c2f7bd8-904f-478a-b140-a342eaae65ba" />
+
+   
 
 ## Design Decisions
 
@@ -80,7 +101,7 @@ _Screenshots will be provided by the user to showcase:_
 
 ### Core Technologies
 
-- **React 18** with TypeScript for type safety
+- **React 19** with TypeScript for type safety
 - **styled-components** for CSS-in-JS styling
 - **React Router** for navigation
 - **Vite** for fast development and building
