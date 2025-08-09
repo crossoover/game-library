@@ -59,7 +59,7 @@ _Screenshots will be provided by the user to showcase:_
 
 
 4. **Loading States** - Skeleton components during data fetch
-<img width="1574" height="1073" alt="Screenshot 2025-08-10 at 00 06 43" src="https://github.com/user-attachments/assets/249a490a-acc5-4159-99b1-ee88a5e029d9" />
+<img width="1574" height="1074" alt="Screenshot 2025-08-10 at 00 32 59" src="https://github.com/user-attachments/assets/f0385eff-b251-4293-9d3f-57f53dca3c85" />
 
 
 5. **Empty States** - Engaging messaging when no games found
