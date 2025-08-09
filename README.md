@@ -193,7 +193,7 @@ App
 
 ### Responsive Strategy
 
-- **Mobile-first** CSS with progressive enhancement
+- **Desktop-first** styling with progressive enhancement
 - **Flexible grid** system adapts to screen sizes
 - **Touch targets** minimum 44px for easy interaction
 - **Sidebar collapse** on mobile with hamburger menu
@@ -230,7 +230,7 @@ App
 
 ### Technical Improvements
 
-- **Unit testing** with Jest and React Testing Library
+- **More detailed unit testing** with Jest and React Testing Library
 - **E2E testing** with Playwright or Cypress
 - **Storybook** for component documentation and development
 - **Error boundaries** for graceful error handling
